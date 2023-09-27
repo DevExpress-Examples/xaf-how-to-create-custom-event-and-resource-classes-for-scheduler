@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Application Title="CustomEventsAndResources">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+	  <Class Name="CustomEventsAndResources.Module.BusinessObjects.CustomEvent">
+		  <OwnMembers>
+			  <Member Name="StartOn" Caption="Start" DisplayFormat="{0:g}" EditMask="g" />
+			  <Member Name="EndOn" Caption="End" DisplayFormat="{0:g}" EditMask="g" />
+		  </OwnMembers>
+	  </Class>
+  </BOModel>
+	<NavigationItems StartupNavigationItem="CustomEventWithUserResources_ListView">
+		<Items>
+			<Item Id="Default">
+				<Items>
+					<Item Id="Event_ListView" Removed="True" />
+				</Items>
+			</Item>
+		</Items>
+	</NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+	<ListView Id="CustomEventWithUserResources_ListView" AllowEdit="True"/>
+    <ListView Id="CustomEventWithCustomResource_ListView" AllowEdit="True" ResourceClass="CustomEventsAndResources.Module.BusinessObjects.CustomResource" />
+  </Views>
+</Application>
