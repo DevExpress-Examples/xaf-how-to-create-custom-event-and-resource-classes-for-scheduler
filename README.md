@@ -9,9 +9,9 @@ In XAF Scheduler, you can view and edit Business Objects that implement the `IEv
 
 XAF's [Business Class Library](https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces) offers the `Event` and `Resource` classes implementing these interfaces that you can use out of the box. However, you may need to implement custom `Event` and `Resource` classes or extend your existing classes.
 
-This example covers the following popular scenarios:
+This example covers the following scenarios:
 
-1. [Create custom Event and Resource classes](#create-a-custom-event-class-and-implement-the-ievent-irecurrentevent-ireminderevent-and-ixafentityobject-interfaces).
+1. [Implement custom events and resources](#implement-custom-events-and-resources).
 
 2. [Use ApplicationUser as a resource in Scheduler](#implement-the-iresource-interface-in-the-applicationuser-class).
 
@@ -22,8 +22,7 @@ This example covers the following popular scenarios:
 > * "c:\Program Files\DevExpress 2X.Y\Components\Sources\DevExpress.Persistent\DevExpress.Persistent.BaseImpl.Xpo\Event.cs"
 > * "c:\Program Files\DevExpress 2X.Y\Components\Sources\DevExpress.Persistent\DevExpress.Persistent.BaseImpl.Xpo\Resource.cs"
 
-## Create a Custom Event Class and Implement the IEvent, IRecurrentEvent, IReminderEvent, and IXafEntityObject Interfaces
-
+## Implement Custom Events and Resources
 1. Add simple properties. See the [#region Base Properties](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L29) section in the source code. It contains all `IEvent` properties except `ResourceId`.
 
 2. Implement resource support. See the [#region Resources](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L57) section in the source code.
