@@ -1,3 +1,7 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1192223)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # XAF - Create Custom Event and Resource Classes for XAF Scheduler
 
 In XAF Scheduler, you can view and edit Business Objects that implement the `IEvent` interface for [events](https://docs.devexpress.com/eXpressAppFramework/112812/event-planning-and-notifications/scheduler/scheduler-module-overview#events) and the `IResource` interface for [resources](https://docs.devexpress.com/eXpressAppFramework/112813/event-planning-and-notifications/scheduler/resources-in-a-schedule). XAF's [Business Class Library(https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces)] offers the `Event` and `Resource` classes implementing these interfaces that you can use out-of-the-box.
