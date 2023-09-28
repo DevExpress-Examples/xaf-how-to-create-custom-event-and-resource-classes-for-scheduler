@@ -36,9 +36,7 @@ This example covers the following scenarios:
     > **Note**  
     > Currently XAF Scheduler ASP.NET Core Blazor Module does not support reminders. Skip this section for ASP.NET Core Blazor applications.
 
-5. Add Blazor-compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L272) section in the source code.
-
-    Skip this step if you do not plan to implement the `Event` class in an XAF ASP.NET Core Blazor application.
+5. Add Blazor-compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L272) section in the source code. Skip this step if you do not plan to implement the `Event` class in an XAF ASP.NET Core Blazor application.
 
     > [!NOTE]
     > Currently, XAF Blazor Scheduler Module supports only one resource. You need the `ResourceIdBlazor` property to select a resource from the `Resources` collection. You can implement you own resource selection logic.
