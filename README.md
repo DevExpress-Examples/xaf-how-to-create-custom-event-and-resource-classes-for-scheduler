@@ -45,9 +45,9 @@ This example covers the following scenarios:
 
     If you need to initialize a property (for example the `StartOn` and `EndOn` properties) when XAF creates a new `CustomEvent`, override the `OnCreated` event.
 
-7. Add validation. See the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L304) section in the source code.
+7. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L304) section in the source code.
 
-    If you want to use the [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module), add validation rules to your object. For example, you can demand that a `StartOn` date always precedes an `EndOn` date.
+    To use the [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module), add validation rules to your object. For example, you can demand that a `StartOn` date always precedes an `EndOn` date.
 
 ## Implement the IResource Interface in the ApplicationUser Class
 
