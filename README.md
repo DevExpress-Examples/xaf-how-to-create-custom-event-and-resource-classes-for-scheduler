@@ -23,7 +23,7 @@ This example covers the following scenarios:
 > * "c:\Program Files\DevExpress 2X.Y\Components\Sources\DevExpress.Persistent\DevExpress.Persistent.BaseImpl.Xpo\Resource.cs"
 
 ## Implement Custom Events and Resources
-1. Add simple properties. See the [#region Base Properties](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L29) section in the source code. It contains all `IEvent` properties except `ResourceId`.
+1. Create a new class and add simple properties. See the [#region Base Properties](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L29) section in the source code. It contains all `IEvent` properties except `ResourceId`.
 
 2. Implement resource support. See the [#region Resources](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L57) section in the source code.
     
