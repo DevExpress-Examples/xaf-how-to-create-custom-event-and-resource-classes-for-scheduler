@@ -33,8 +33,5 @@ public class CustomResource : IResource, IXafEntityObject {
         Color = Color.White;
     }
     public virtual void OnSaving() { }
-    [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals")]
-    public virtual void OnLoaded() {
-        Int32 count = Events.Count;
-    }
+    public virtual void OnLoaded() { }
 }
