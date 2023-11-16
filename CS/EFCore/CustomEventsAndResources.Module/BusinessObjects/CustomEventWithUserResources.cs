@@ -63,9 +63,6 @@ public class CustomEventWithUserResources : BaseObject, IEvent, IXafEntityObject
             UpdateResources();
         }
     }
-    public override void OnLoaded() {
-        Int32 count = Resources.Count;
-    }
     private void UpdateResources() {
         while (Resources.Count > 0) {
             Resources.RemoveAt(Resources.Count - 1);
