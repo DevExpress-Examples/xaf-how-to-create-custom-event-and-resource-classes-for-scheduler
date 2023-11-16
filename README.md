@@ -29,23 +29,23 @@ The example in this repository implements the following scenarios:
     
     The `IEvent` interface requires a string `ResourceId` property that stores a collection of resources in an XML string (required by the Scheduler control). In XAF, we recommend that you add an associated collection of objects instead. Add the `ResourceId` string property and the `Resources` collection property and set up synchronization between them.
 
-3. Implement `IRecurrentEvent`. See the [#region IRecurrentEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L115) section in the source code.
+3. Implement `IRecurrentEvent`. See the [#region IRecurrentEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L112) section in the source code.
 
-4. Implement `IReminderEvent`. See the [#region IReminderEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L131) section in the source code.
+4. Implement `IReminderEvent`. See the [#region IReminderEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L128) section in the source code.
 
     > **Note**  
     > Reminders are currently not supported in XAF Scheduler Module for ASP.NET Core Blazor. Skip this section for ASP.NET Core Blazor applications.
 
-5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L272) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
+5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
 
     > [!NOTE]
     > XAF Scheduler Module for ASP.NET Core Blazor currently supports only one resource. You need the `ResourceIdBlazor` property to select a resource from the `Resources` collection. You can implement you own resource selection logic.
 
-6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L296) section in the source code.
+6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
 
     If you need to initialize a property (for example the `StartOn` or `EndOn` property) when XAF creates a new `CustomEvent`, override the `OnCreated` event.
 
-7. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L304) section in the source code.
+7. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L301) section in the source code.
 
     To use the [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module), add validation rules to your object. For example, you can demand that the `StartOn` date always precedes the `EndOn` date.
 
