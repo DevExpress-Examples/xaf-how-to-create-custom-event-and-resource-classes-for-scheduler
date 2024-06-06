@@ -32,13 +32,16 @@ The example in this repository implements the following scenarios:
 
 4. Implement `IReminderEvent`. See the [#region IReminderEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L128) section in the source code.
 
-5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
+   > **Note**
+   > Reminders are currently not supported in XAF Scheduler Module for ASP.NET Core Blazor. Skip this section for ASP.NET Core Blazor applications.
 
-6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
+6. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
+
+7. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
 
     If you need to initialize a property (for example the `StartOn` or `EndOn` property) when XAF creates a new `CustomEvent`, override the `OnCreated` event.
 
-7. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L301) section in the source code.
+8. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L301) section in the source code.
 
     To use the [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module), add validation rules to your object. For example, you can demand that the `StartOn` date always precedes the `EndOn` date.
 
