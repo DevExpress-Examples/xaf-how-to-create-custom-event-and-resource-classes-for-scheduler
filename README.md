@@ -38,9 +38,6 @@ The example in this repository implements the following scenarios:
 
 5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
 
-    > [!NOTE]
-    > XAF Scheduler Module for ASP.NET Core Blazor currently supports only one resource. You need the `ResourceIdBlazor` property to select a resource from the `Resources` collection. You can implement you own resource selection logic.
-
 6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
 
     If you need to initialize a property (for example the `StartOn` or `EndOn` property) when XAF creates a new `CustomEvent`, override the `OnCreated` event.
