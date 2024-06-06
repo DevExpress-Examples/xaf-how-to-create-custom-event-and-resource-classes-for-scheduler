@@ -32,9 +32,6 @@ The example in this repository implements the following scenarios:
 
 4. Implement `IReminderEvent`. See the [#region IReminderEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L128) section in the source code.
 
-    > **Note**  
-    > Reminders are currently not supported in XAF Scheduler Module for ASP.NET Core Blazor. Skip this section for ASP.NET Core Blazor applications.
-
 5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
 
 6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
