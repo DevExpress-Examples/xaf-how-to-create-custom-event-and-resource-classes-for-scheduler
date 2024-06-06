@@ -282,28 +282,6 @@ public class CustomEventWithUserResources : BaseObject, IEvent, IRecurrentEvent,
     #endregion
     #region Blazor compatibility
     [NonPersistent(), Browsable(false)]
-    public object ResourceIdBlazor {
-        get {
-            if (Resources.Count == 1) {
-                return Resources[0].Id;
-            }
-            return null;
-        }
-        set {
-            Resources.SuspendChangedEvents();
-            try {
-                while (Resources.Count > 0) {
-                    Resources.Remove(Resources[0]);
-                }
-                if (value != null) {
-                    Resources.Add(Session.GetObjectByKey<ApplicationUser>(value));
-                }
-            } finally {
-                Resources.ResumeChangedEvents();
-            }
-        }
-    }
-    [NonPersistent(), Browsable(false)]
     public string RecurrenceInfoXmlBlazor {
         get { return RecurrenceInfoXml?.ToNewRecurrenceInfoXml(); }
         set { RecurrenceInfoXml = value?.ToOldRecurrenceInfoXml(); }
