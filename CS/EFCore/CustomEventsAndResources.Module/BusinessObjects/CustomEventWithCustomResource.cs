@@ -262,16 +262,6 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IXafEntityObjec
     #endregion
     #region Blazor compatibility
     [NotMapped, Browsable(false)]
-    public object ResourceIdBlazor {
-        get => Resource.Id;
-        set {
-            Resource = null;
-            if (value != null) {
-                Resource = ObjectSpace.GetObjectByKey<CustomResource>(value);
-            }
-        }
-    }
-    [NotMapped, Browsable(false)]
     public string RecurrenceInfoXmlBlazor {
         get { return RecurrenceInfoXml?.ToNewRecurrenceInfoXml(); }
         set { RecurrenceInfoXml = value?.ToOldRecurrenceInfoXml(); }
