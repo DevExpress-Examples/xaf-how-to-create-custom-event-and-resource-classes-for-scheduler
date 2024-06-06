@@ -257,16 +257,6 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IRecurrentEvent
     #endregion
     #region Blazor compatibility
     [NonPersistent(), Browsable(false)]
-    public object ResourceIdBlazor {
-        get => Resource.Id;
-        set {
-            Resource = null;
-            if (value != null) {
-                Resource = Session.GetObjectByKey<CustomResource>(value);
-            }
-        }
-    }
-    [NonPersistent(), Browsable(false)]
     public string RecurrenceInfoXmlBlazor {
         get { return RecurrenceInfoXml?.ToNewRecurrenceInfoXml(); }
         set { RecurrenceInfoXml = value?.ToOldRecurrenceInfoXml(); }

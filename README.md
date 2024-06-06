@@ -1,5 +1,4 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/697272304/23.1.4%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1192223)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
@@ -33,19 +32,16 @@ The example in this repository implements the following scenarios:
 
 4. Implement `IReminderEvent`. See the [#region IReminderEvent](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L128) section in the source code.
 
-    > **Note**  
-    > Reminders are currently not supported in XAF Scheduler Module for ASP.NET Core Blazor. Skip this section for ASP.NET Core Blazor applications.
+   > **Note**
+   > Reminders are currently not supported in XAF Scheduler Module for ASP.NET Core Blazor. Skip this section for ASP.NET Core Blazor applications.
 
-5. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
+6. Add Blazor compatibility options. See the [#region Blazor compatibility](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L269) section in the source code. Skip this step if you do not plan to implement the `Event` class in an ASP.NET Core Blazor application.
 
-    > [!NOTE]
-    > XAF Scheduler Module for ASP.NET Core Blazor currently supports only one resource. You need the `ResourceIdBlazor` property to select a resource from the `Resources` collection. You can implement you own resource selection logic.
-
-6. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
+7. Implement object construction. See the [#region Construction](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L293) section in the source code.
 
     If you need to initialize a property (for example the `StartOn` or `EndOn` property) when XAF creates a new `CustomEvent`, override the `OnCreated` event.
 
-7. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L301) section in the source code.
+8. If you want to add validation, see the [#region Validation](./CS/EFCore/CustomEventsAndResources.Module/BusinessObjects/CustomEventWithUserResources.cs#L301) section in the source code.
 
     To use the [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module), add validation rules to your object. For example, you can demand that the `StartOn` date always precedes the `EndOn` date.
 
