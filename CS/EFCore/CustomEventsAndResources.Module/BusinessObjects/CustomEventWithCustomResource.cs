@@ -20,6 +20,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml;
+using System.Security.AccessControl;
 
 namespace CustomEventsAndResources.Module.BusinessObjects; 
 [DefaultClassOptions]
@@ -261,6 +262,19 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IXafEntityObjec
 
     #endregion
     #region Blazor compatibility
+    [NotMapped, Browsable(false)]
+    public object ResourceIdBlazor
+    {
+        get => Resource.Id;
+        set
+        {
+            Resource = null;
+            if (value != null)
+            {
+                Resource = ObjectSpace.GetObjectByKey<CustomResource>(value);
+            }
+        }
+    }
     [NotMapped, Browsable(false)]
     public string RecurrenceInfoXmlBlazor {
         get { return RecurrenceInfoXml?.ToNewRecurrenceInfoXml(); }
