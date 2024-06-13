@@ -265,7 +265,7 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IXafEntityObjec
     [NotMapped, Browsable(false)]
     public object ResourceIdBlazor
     {
-        get => Resource.Id;
+        get => Resource?.Id;
         set
         {
             Resource = null;

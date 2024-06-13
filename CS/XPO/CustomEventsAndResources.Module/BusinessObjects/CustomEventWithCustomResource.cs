@@ -259,7 +259,7 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IRecurrentEvent
     [NonPersistent(), Browsable(false)]
     public object ResourceIdBlazor
     {
-        get => Resource.Id;
+        get => Resource?.Id;
         set
         {
             Resource = null;
