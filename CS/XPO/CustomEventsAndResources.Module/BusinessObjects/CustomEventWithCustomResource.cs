@@ -64,6 +64,7 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IRecurrentEvent
     [Persistent("ResourceIds"), Size(SizeAttribute.Unlimited), ObjectValidatorIgnoreIssue(typeof(ObjectValidatorLargeNonDelayedMember))]
     private String resourceIds;
     private void UpdateResource() {
+        string resourceIds = this.resourceIds;
         Resource = null;
         if (!String.IsNullOrEmpty(resourceIds)) {
             XmlDocument xmlDocument = DevExpress.Utils.SafeXml.CreateDocument(resourceIds);
@@ -87,10 +88,12 @@ public class CustomEventWithCustomResource : BaseObject, IEvent, IRecurrentEvent
     [Association("CustomEventWithCustomResource-CustomResource")]
     public CustomResource Resource {
         get => GetPropertyValue<CustomResource>(nameof(Resource));
-        set { 
+        set {
             SetPropertyValue(nameof(Resource), value);
-            UpdateResourceIds();
-            OnChanged(nameof(ResourceId));
+            if (!IsLoading) {
+                UpdateResourceIds();
+                OnChanged(nameof(ResourceId));
+            }
         }
     }
     [NonPersistent(), Browsable(false)]
