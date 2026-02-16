@@ -86,7 +86,7 @@ The example in this repository implements the following scenarios:
 - [Resources in a Schedule](https://docs.devexpress.com/eXpressAppFramework/112813/event-planning-and-notifications/scheduler/resources-in-a-schedule)
 - [Recurring Events](https://docs.devexpress.com/eXpressAppFramework/113128/event-planning-and-notifications/scheduler/recurring-events)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-create-custom-event-and-resource-classes-for-scheduler&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-create-custom-event-and-resource-classes-for-scheduler&~~~was_helpful=no)
 
