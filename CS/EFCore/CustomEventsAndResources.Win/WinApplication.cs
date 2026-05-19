@@ -22,7 +22,6 @@ public class CustomEventsAndResourcesWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "CustomEventsAndResources";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += CustomEventsAndResourcesWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += CustomEventsAndResourcesWindowsFormsApplication_CustomizeLanguagesList;
         LastLogonParametersRead += (s, e) => {
