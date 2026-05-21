@@ -164,7 +164,7 @@ public class CustomEventWithUserResources : BaseObject, IEvent, IXafEntityObject
         }
     }
     private IList<PostponeTime> CreatePostponeTimes() {
-        IList<PostponeTime> result = PostponeTime.CreateDefaultPostponeTimesList();
+        List<PostponeTime> result = PostponeTime.CreateDefaultPostponeTimesList();
         result.Add(new PostponeTime("None", null, "None"));
         result.Add(new PostponeTime("AtStartTime", TimeSpan.Zero, "0 minutes"));
         CustomizeNotificationsPostponeTimeListEventArgs args = new CustomizeNotificationsPostponeTimeListEventArgs(result);
