@@ -136,7 +136,7 @@ public class CustomEventWithUserResources : BaseObject, IEvent, IRecurrentEvent,
     #endregion
     #region IRecurrentEvent
     [Persistent("RecurrencePattern")]
-    private Event recurrencePattern;
+    private CustomEventWithUserResources recurrencePattern;
     private string recurrenceInfoXml;
     [NonCloneable]
     [DevExpress.Xpo.DisplayName("Recurrence"), Size(SizeAttribute.Unlimited), ObjectValidatorIgnoreIssue(typeof(ObjectValidatorLargeNonDelayedMember))]
@@ -147,7 +147,7 @@ public class CustomEventWithUserResources : BaseObject, IEvent, IRecurrentEvent,
     [PersistentAlias(nameof(recurrencePattern))]
     public IRecurrentEvent RecurrencePattern {
         get { return recurrencePattern; }
-        set { SetPropertyValue(nameof(RecurrencePattern), ref recurrencePattern, (Event)value); }
+        set { SetPropertyValue(nameof(RecurrencePattern), ref recurrencePattern, (CustomEventWithUserResources)value); }
     }
     #endregion
     #region IReminderEvent
